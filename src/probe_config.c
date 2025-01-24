@@ -1,6 +1,7 @@
 #include "probe_config.h"
 #include "pico/binary_info.h"
 
+#include <pico/stdlib.h>
 
 #define STR_HELPER(x) #x
 #define STR(x) STR_HELPER(x)
@@ -44,5 +45,4 @@ void bi_decl_config()
 #ifdef PROBE_UART_DTR
     bi_decl(bi_1pin_with_name(PROBE_UART_DTR, "PROBE UART DTR"));
 #endif
-
 }
